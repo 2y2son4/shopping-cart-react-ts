@@ -12,7 +12,6 @@ import Badge from '@material-ui/core/Badge';
 
 // styles
 import { Wrapper, StyledButton } from './App.styles';
-// import { AmpStoriesOutlined } from '@material-ui/icons';
 
 // types
 export type CartItemType = {
@@ -69,6 +68,7 @@ const App = () => {
 
   return (
     <Wrapper>
+      <h1>La tiendinchi</h1>
       <Drawer anchor='right' open={cartOpen} onClose={() => setCartOpen(false)}>
         <Cart cartItems={cartItems} addToCart={addToCartHandler} removeFromCart={removeFromCartHandle} />
       </Drawer>
@@ -78,7 +78,7 @@ const App = () => {
         </Badge>
       </StyledButton>
 
-      <Grid container spacing={3}>
+      <Grid container spacing={5}>
         {data?.map((item) => (
           <Grid item key={item.id} xs={12} sm={4}>
             <Item item={item} addToCartHandler={addToCartHandler} />

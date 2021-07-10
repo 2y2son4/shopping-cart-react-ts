@@ -5,9 +5,16 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: 100%;
-  border: 1px solid lightblue;
+  border: 2px solid #daa520;
   border-radius: 20px;
+  overflow: hidden;
   height: 100%;
+  transition: all 0.3s linear;
+  cursor: pointer;
+
+  :hover {
+    transform: scale(1.08);
+  }
 
   button {
     border-radius: 0 0 20px 20px;
