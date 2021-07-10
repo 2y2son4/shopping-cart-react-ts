@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   > h1 {
     text-align: center;
+    margin-bottom: 40px;
   }
 
   > p {

@@ -7,13 +7,14 @@ export const Wrapper = styled.div`
   width: 100%;
   border: 2px solid #daa520;
   border-radius: 20px;
-  overflow: hidden;
   height: 100%;
   transition: all 0.3s linear;
   cursor: pointer;
+  filter: grayscale(50%);
 
   :hover {
-    transform: scale(1.08);
+    transform: scale(1.05);
+    filter: grayscale(0%);
   }
 
   button {
@@ -22,7 +23,8 @@ export const Wrapper = styled.div`
 
   img {
     max-height: 250px;
-    object-fit: cover;
+    object-fit: scale-down;
+    margin: 10px;
     border-radius: 20px 20px 0 0;
   }
 
@@ -30,5 +32,9 @@ export const Wrapper = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     padding: 1rem;
     height: 100%;
+  }
+
+  p {
+    overflow: hidden;
   }
 `;
