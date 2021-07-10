@@ -68,7 +68,7 @@ const App = () => {
 
   return (
     <Wrapper>
-      <h1>La tiendinchi</h1>
+      <h1>Little shop of randomness</h1>
       <Drawer anchor='right' open={cartOpen} onClose={() => setCartOpen(false)}>
         <Cart cartItems={cartItems} addToCart={addToCartHandler} removeFromCart={removeFromCartHandle} />
       </Drawer>
