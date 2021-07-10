@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { useQuery } from 'react-query';
 
 // components
-import Drawer from '@material-ui/core/drawer';
+import Item from './Item/Item';
+// import Drawer from '@material-ui/core/drawer';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Grid from '@material-ui/core/Grid';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
@@ -30,7 +31,26 @@ const App = () => {
 
   console.log(data);
 
-  return <div className='App'>Ma'bulo</div>;
+  const getTotalItems = () => null;
+
+  const addToCartHandler = (clickedItem: CartItemType) => null;
+
+  const removeFromCartHandle = () => null;
+
+  if (isLoading) return <LinearProgress />;
+  if (error) return <div>Something went wrong...</div>;
+
+  return (
+    <Wrapper>
+      <Grid container spacing={3}>
+        {data?.map((item) => (
+          <Grid item key={item.id} xs={12} sm={4}>
+            <Item item={item} addToCartHandler={addToCartHandler} />
+          </Grid>
+        ))}
+      </Grid>
+    </Wrapper>
+  );
 };
 
 export default App;
