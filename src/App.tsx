@@ -7,7 +7,7 @@ import Cart from './Cart/Cart';
 import Drawer from '@material-ui/core/Drawer';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Grid from '@material-ui/core/Grid';
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import { ShoppingCart } from '@material-ui/icons';
 import Badge from '@material-ui/core/Badge';
 
 // styles
@@ -74,13 +74,13 @@ const App = () => {
       </Drawer>
       <StyledButton onClick={() => setCartOpen(true)}>
         <Badge badgeContent={getTotalItems(cartItems)} color='error'>
-          <AddShoppingCartIcon />
+          <ShoppingCart />
         </Badge>
       </StyledButton>
 
       <Grid container spacing={5}>
         {data?.map((item) => (
-          <Grid item key={item.id} xs={12} sm={4}>
+          <Grid item key={item.id} xs>
             <Item item={item} addToCartHandler={addToCartHandler} />
           </Grid>
         ))}

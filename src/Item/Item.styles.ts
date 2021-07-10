@@ -15,6 +15,10 @@ export const Wrapper = styled.div`
   :hover {
     transform: scale(1.05);
     filter: grayscale(0%);
+    border: 2px solid #edd087;
+    div {
+      background-color: #edd087;
+    }
   }
 
   button {
@@ -32,6 +36,7 @@ export const Wrapper = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     padding: 1rem;
     height: 100%;
+    transition: all 0.3s linear;
   }
 
   p {
